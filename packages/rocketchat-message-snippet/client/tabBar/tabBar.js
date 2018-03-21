@@ -3,9 +3,9 @@ Meteor.startup(function() {
 		if (RocketChat.settings.get('Message_AllowSnippeting')) {
 			RocketChat.TabBar.addButton({
 				groups: ['channel', 'group', 'direct'],
-				id: 'snippeted-messages',
-				i18nTitle: 'snippet-message',
-				icon: 'code',
+				id: 'Tweets',
+				i18nTitle: 'Tweets',
+				icon: 'twitter',
 				template: 'snippetedMessages',
 				order: 20
 			});
