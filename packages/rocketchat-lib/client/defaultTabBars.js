@@ -13,7 +13,7 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'User_Info',
 	icon: 'user',
 	template: 'membersList',
-	order: 2
+	order: 4
 });
 
 RocketChat.TabBar.addButton({
@@ -22,7 +22,7 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Members_List',
 	icon: 'team',
 	template: 'membersList',
-	order: 2
+	order: 4
 });
 
 RocketChat.TabBar.addButton({
@@ -31,7 +31,7 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Add_users',
 	icon: 'user-plus',
 	template: 'inviteUsers',
-	order: 4
+	order: 5
 });
 
 
@@ -41,7 +41,7 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Room_uploaded_file_list',
 	icon: 'clip',
 	template: 'uploadedFilesList',
-	order: 5
+	order: 6
 });
 
 RocketChat.TabBar.addButton({
@@ -50,5 +50,5 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Keyboard_Shortcuts_Title',
 	icon: 'keyboard',
 	template: 'keyboardShortcuts',
-	order: 6
+	order: 7
 });
