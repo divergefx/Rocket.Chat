@@ -1,9 +1,9 @@
 RocketChat.TabBar.addButton({
 	groups: ['channel', 'group', 'direct'],
-	id: 'message-search',
+	id: 'rocket-search',
 	i18nTitle: 'Search_Messages',
 	icon: 'magnifier',
-	template: 'messageSearch',
+	template: 'RocketSearch',
 	order: 1
 });
 
@@ -13,7 +13,7 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'User_Info',
 	icon: 'user',
 	template: 'membersList',
-	order: 4
+	order: 2
 });
 
 RocketChat.TabBar.addButton({
@@ -22,7 +22,19 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Members_List',
 	icon: 'team',
 	template: 'membersList',
-	order: 4
+	order: 2,
+	condition() {
+		const rid = Session.get('openedRoom');
+		const room = RocketChat.models.Rooms.findOne({
+			_id: rid
+		});
+
+		if (!room || !room.broadcast) {
+			return true;
+		}
+
+		return RocketChat.authz.hasRole(Meteor.userId(), ['admin', 'moderator', 'owner'], rid);
+	}
 });
 
 RocketChat.TabBar.addButton({
@@ -31,7 +43,7 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Add_users',
 	icon: 'user-plus',
 	template: 'inviteUsers',
-	order: 5
+	order: 2
 });
 
 
@@ -41,7 +53,7 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Room_uploaded_file_list',
 	icon: 'clip',
 	template: 'uploadedFilesList',
-	order: 6
+	order: 3
 });
 
 RocketChat.TabBar.addButton({
@@ -50,5 +62,5 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Keyboard_Shortcuts_Title',
 	icon: 'keyboard',
 	template: 'keyboardShortcuts',
-	order: 7
+	order: 4
 });
