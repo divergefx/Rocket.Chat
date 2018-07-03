@@ -13,7 +13,7 @@ Meteor.startup(function() {
 				order: 3,
 				class: () => {
 					const roomWithStream = RocketChat.models.Rooms.findOne({ _id: Session.get('openedRoom'), 'streamingOptions.id': {$exists :1} }, { fields: { streamingOptions: 1 } }) || '';
-					return roomWithStream && 'live';
+					return roomWithStream;
 				}
 			});
 		}
