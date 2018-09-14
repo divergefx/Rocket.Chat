@@ -5,6 +5,6 @@ Meteor.startup(function() {
 		i18nTitle: 'Starred_Messages',
 		icon: 'star',
 		template: 'starredMessages',
-		order: 4
+		order: 3,
 	});
 });
