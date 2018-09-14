@@ -64,3 +64,4 @@ RocketChat.TabBar.addButton({
 	template: 'keyboardShortcuts',
 	order: 7
 });
+/**/
