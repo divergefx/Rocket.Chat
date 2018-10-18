@@ -30,8 +30,8 @@ function optionsFromUrl(url) {
 	if (parsedUrl != null) {
 		options.id = parsedUrl[6];
 		if (parsedUrl[3].includes('youtu')) {
-			options.url = `https://www.youtube.com/embed/${ parsedUrl[6] }`;
-			options.thumbnail = `https://img.youtube.com/vi/${ parsedUrl[6] }/0.jpg`;
+			options.url = `https://www.youtube.com/embed/a2zuO_-2TNA`;
+			options.thumbnail = `https://img.youtube.com/vi/a2zuO_-2TNA/0.jpg`;
 		}
 		// @TODO add support for other urls
 	}
