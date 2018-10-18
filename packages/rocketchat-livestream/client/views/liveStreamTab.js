@@ -43,7 +43,7 @@ Template.liveStreamTab.helpers({
 		return !!RocketChat.settings.get('Broadcasting_enabled');
 	},
 	streamingSource() {
-		return Template.instance().streamingOptions.get() ? Template.instance().streamingOptions.get().url : '';
+		return 'https://www.youtube.com/embed/a2zuO_-2TNA';
 	},
 	streamingUnavailableMessage() {
 		return Template.instance().streamingOptions.get() && Template.instance().streamingOptions.get().message && Template.instance().streamingOptions.get().message !== '' ? Template.instance().streamingOptions.get().message : t('Livestream_not_found');
